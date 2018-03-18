@@ -33,7 +33,7 @@ def get_credentials(secret_file=CLIENT_SECRET_FILE):
     store = Storage(credential_path)
     credentials = store.get()
     if not credentials or credentials.invalid:
-        flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPES)
+        flow = client.flow_from_clientsecrets(secret_file, SCOPES)
         flow.user_agent = APPLICATION_NAME
         print('Storing credentials to ' + credential_path)
     return credentials
