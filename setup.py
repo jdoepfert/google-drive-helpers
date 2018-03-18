@@ -6,4 +6,7 @@ setup(name='google-drive-helpers',
       url='https://github.com/jdoepfert/google-drive-helpers',
       license='MIT',
       packages=['gdrive_helpers'],
+      install_requires=[
+          'google-api-python-client',
+      ],
       zip_safe=False)
